@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Hamster';
+  src: url('fonts/havana/Havana-Regular.otf') format('opentype'), url('fonts/havana/Havana-Regular.ttf') format('truetype'), url('fonts/havana/Havana-Regular.woff') format('woff');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  background: rgb(69, 92, 123);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-title {
+  flex: 0 1 auto;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.big-img-container {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-img-frame {
+  justify-content: center;
+  text-align: center;
+  transition: transform 333ms cubic-bezier(1, 0.06, 0.28, 1);
+}
+
+.very-small-img {
+  transform: scale(0.001);
+   transition: transform 0ms;
+}
+
+.big-img {
+  width: 90%;
+}
+
+.big-img-title {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+  color: white;
+  font-family: hamster;
+  text-shadow: rgba(0, 0, 0, 0.9) 3px 4px 9px;
+  font-size: 40px;
+}
+
+.minature-list {
+  flex: 0 1 auto;
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.list-element {
+  display: inline-block;
+  min-width: 120px;
+  max-width: 120px;
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
+  transition: transform 133ms ease-in-out;
+}
+
+.list-element:hover {
+  transform: scale(1.2);
+}
+
+.minature-img {
+  display: block;
+  width: 100%;
+}
+
+.minature-title {
+  display: block;
+  margin: 0;
+  padding: 4px 10px;
+  background: rgb(216, 206, 245);
+  color: rgb(104, 92, 121);
+  font-size: 28px;
+  font-family: 'Hamster', cursive;
+  text-align: center;
+}
+
+.text-logo {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Combo', cursive;
+  color: rgb(218, 114, 126);
+}
+
+.big-img-hidden .big-img-container {
+  display: none;
+}
+
+.big-img-hidden .minature-list {
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-img-hidden .list-element {
+  max-width: 80%;
+}
+
+@media all and (orientation: landscape) {
+  body {
+    background: rgb(71, 65, 67);
+  }
+
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .minature-list {
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+    padding: 0 35px;
+  }
+
+  .list-element {
+    max-width: 260px;
+  }
+
+  .list-element + .list-element {
+    margin-top: 20px;
+  }
+}
