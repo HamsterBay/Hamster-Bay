@@ -35,6 +35,6 @@ Don't forget to press ESC key while testing this website :) .
 
 ## Authors
 
-* **Kasia Vasiluk** - *Hamster Bay* [github: Chomcio](https://github.com/chomcio)
+* **Kasia Vasiluk** - *Hamster Bay* [github: HamsterBay](https://github.com/HamsterBay)
 
 Icon made by [Freepik](https://www.flaticon.com/) from www.flaticon.com
